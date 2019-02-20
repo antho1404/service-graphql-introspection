@@ -1,0 +1,22 @@
+name: GraphQL Introspection
+description: Get schema data of GraphQL from introspection query
+sid: graphql-introspection
+tasks:
+  introspect:
+    inputs:
+      schema:
+        description: JSON encoded schema
+        type: String
+      query:
+        description: JSON encoded introspection query
+        type: String
+    outputs:
+      success:
+        data:
+          data:
+            description: JSON encoded schema data
+            type: String
+      error:
+        data:
+          message:
+            type: String
